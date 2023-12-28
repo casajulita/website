@@ -51,18 +51,72 @@ table {
     padding: 0px;
   }
 
+html, body{
+    height:100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
 nav {
     width: 100%;
     min-height: 6rem;
     border-bottom: 3px solid rgb(59 130 246);
-    display: grid;
+    /* display: grid; */
+    justify-content: center;
+    align-content: center;
 }
 .logo {
     background-image: url(../img/Imagotipo-CJ.svg);
     background-repeat: no-repeat;
-    background-size: contain;
+    min-height: 5rem;
+    background-size: 90%;
+    background-position: center;
     min-height: 6rem;
     margin: auto;
     width: 33.333333%;
-
+}
+.content {
+    width: 100%;
+    position: relative;
+    min-height: 500px;
+    height:100%;
+}
+.content-int {
+    max-width: 80%;
+    height: 100%;
+    /*background-color: blueviolet;*/
+    min-height: 500px;
+    margin: 0 auto;
+}
+.box {
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.box-int {
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 10px;
+}
+.title {
+    text-align: center;
+}
+.title h1 {
+    font-weight: bold;
+    font-size: 3vw;
+    line-height: 140%;
+    color: white;
+}
+.libreria span {
+    background-color: rgb(59 130 246);
+}
+.grafica span {
+    background-color: rgb(220 38 38);
 }
