@@ -1,3 +1,4 @@
+
 /* Reset CSS */
 
 html, body, div, span, applet, object, iframe,
@@ -43,7 +44,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+a {
+    text-decoration: none;
+}
 /* Fin Reset CSS */
 * {
     box-sizing: border-box;
@@ -60,51 +63,87 @@ html, body{
 }
 nav {
     width: 100%;
-    min-height: 6rem;
+    height: 6rem;
     border-bottom: 3px solid rgb(59 130 246);
     /* display: grid; */
     justify-content: center;
     align-content: center;
 }
+.nav-int {
+    width: 75%;
+    margin: 0 auto;
+    height: 6rem;
+    position: relative;
+}
+.nav-int div {
+    height: 6rem;
+    padding: 0.4rem;
+}
+.cont-element-x2 {
+    width: 50%;
+    float: left;
+    position: relative;
+}
+
 .logo {
     background-image: url(../img/Imagotipo-CJ.svg);
     background-repeat: no-repeat;
-    min-height: 5rem;
-    background-size: 90%;
-    background-position: center;
-    min-height: 6rem;
-    margin: auto;
-    width: 33.333333%;
+    background-size: contain;
+    height: 4.8rem;
+    width: 90%;
+    position: relative;
+    float: left;
 }
+.cont-element-x2:last-child {
+    padding: 1.4rem;
+}
+.menu {
+    width: 100%;
+    overflow: hidden;
+}
+.menu li {
+    display: inline;
+}
+
+.menu li a {
+    float: left;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 17px;
+}
+.open-menu {
+    display: none;
+    background-image: url(../img/toggle.svg);
+    background-repeat: no-repeat;
+    height: 3.5rem;
+    width: 2.5rem;
+    background-size: contain;
+    background-position: center;
+    float: right;
+    border: none;
+    background-color: transparent;
+}
+.menu a:hover {
+    color: red;
+}
+
 .content {
     width: 100%;
     position: relative;
     min-height: 500px;
     height:100%;
 }
-.content-int {
+.cont-lands {
     max-width: 80%;
     height: 100%;
     /*background-color: blueviolet;*/
     min-height: 500px;
     margin: 0 auto;
 }
-.box {
-    width: 50%;
-    height: 100%;
-    float: left;
-    position: relative;
-}
-.box-int {
-    width: 95%;
-    height: 95%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    padding: 10px;
-}
+
+
+/*
 .title {
     text-align: center;
 }
@@ -120,3 +159,50 @@ nav {
 .grafica span {
     background-color: rgb(220 38 38);
 }
+*/
+
+
+  @media screen and (max-width: 1500px) {
+    nav, .nav-int, .nav-int div, .open-menu {
+        height: 4.5rem;
+    }
+    .menu li a {
+        padding: 0.8rem;
+    }
+    .logo {
+        max-height: 3.8rem;
+    }
+    .cont-element-x2:last-child {
+        padding: 0.9rem;
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    .logo {
+        max-height: 2.8rem;
+    }
+    .cont-element-x2:last-child {
+        padding: 0;
+    }
+    .open-menu {
+        display: block;
+    }
+    .menu {display: none;}
+    .responsive {position: absolute;margin-top:3.7rem;display: block;}
+    .responsive li {
+        width: 100%;
+        display: block;
+        float: left;
+        padding: 10px;
+        background-color: aqua;
+    }   
+    nav, .nav-int, .nav-int div, .open-menu {
+        height: 3.7rem;
+    }
+    .menu li a {
+        padding: 0.8rem;
+    }
+  }
+    @media screen and (max-width: 850px) {
+        .nav-int {width: 100%; padding: 0 0.2rem;}
+        .open-menu {height: 3.7rem;background-size: initial;}
+    }

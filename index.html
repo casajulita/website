@@ -14,24 +14,69 @@
     <body>
 
         <nav>
-            <div class="logo"></div>
+            <div class="nav-int">
+
+              <div class="cont-element-x2">
+                <a class="logo"></a>
+              </div>
+
+              <div class="cont-element-x2">
+                <button class="open-menu" onclick="myFunction()"></button>
+                <ul class="menu" id="menu">
+                    <li><a class="e-lib" href="#news">Libreria</a></li>
+                    <li><a class="e-imp" href="#contact">Impresiones</a></li>
+                    <li><a class="e-direc" href="#about">Juguetería</a></li>
+                </ul>
+              </div>
+            </div>
         </nav>
 
         <div class="content">
-            <div class="content-int">
-                <div class="box">
-                    <div class="box-int libreria">
-                        <div class="title"><h1><span class="resaltar">¿Articulos de Libreria?</span></h1></div>
-
+            <div class="cont-lands c-lib">
+                <div class="c-lib-int left">
+                    <div class="c-title">
+                        <h1>Librería</h1>
                     </div>
-                </div>
-                <div class="box">
-                    <div class="box-int grafica">
-                        <div class="title"><h1><span class="resaltar">¿Impresiones?</span></h1></div>
-                        
+                    <div class=""></div>
+                    <div class="c-description">
+                        <p><span></span></p>
                     </div>
                 </div>
             </div>
+            <div class="cont-lands c-imp">
+            <div class="c-imp-int right">
+                <div class="c-title">
+                    <h1>Impresiones</h1>
+                </div>
+                <div class=""></div>
+                <div class="c-description">
+                    <p><span></span></p>
+                </div>
+                
+            </div>
+            </div>
+            <div class="cont-lands c-jug">
+            <div class="c-jug-int right">
+                <div class="c-title">
+                    <h1>Juguetería</h1>
+                </div>
+                <div class=""></div>
+                <div class="c-description">
+                    <p><span></span></p>
+                </div>
+                
+            </div>
+            </div>
         </div>
+        <script>
+            function myFunction() {
+              var menu = document.getElementById("menu");
+              if (menu.className === "menu") {
+                menu.className += " responsive";
+              } else {
+                menu.className = "menu";
+              }
+            }
+            </script>
     </body>
     </html>
